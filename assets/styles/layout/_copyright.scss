@@ -1,0 +1,23 @@
+@use '../util';
+.copyright{
+  background-color: #111502;
+  color:#c9c9c9;
+  display: flex;
+  justify-content: space-between;
+  padding-inline:15rem;
+  @include util.breakpoint(small){
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top:1rem;
+  }
+
+  &__nav ul {
+    display: flex;
+    gap:3rem;
+    cursor: pointer;
+    @include util.breakpoint(small){
+      display: none;
+    }
+  }
+}

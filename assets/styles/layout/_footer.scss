@@ -1,0 +1,32 @@
+@use '../util';
+footer{
+  background-color: #111502;
+  min-height: 400px;
+  line-height:2.5rem;
+  color: #c9c9c9;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+  padding-inline:15rem;
+  @include util.breakpoint(small){
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 1rem;
+  }
+  .col-2{
+    @include util.breakpoint(small){
+    justify-self: center;
+    }
+  }
+  .col-3{
+    justify-self: center;
+    @include util.breakpoint(small){
+    justify-self: start;
+    }
+  }
+  .col-4{
+    justify-self: end;
+    @include util.breakpoint(small){
+    justify-self: center;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use '../util';
+.services{
+  background-color: #FAFAFA;
+
+ &__container{
+   display: flex;
+   justify-content: center;
+  gap:5rem;
+   @include util.breakpoint(small){
+    flex-direction: column;
+     gap:1rem;
+     padding-inline: 1rem;
+   }
+   div{
+     margin-block:4rem;
+     border-left: 2px solid util.$primary-color;
+     padding-left:1.5rem;
+     h3{
+       line-height:2rem;
+     }
+     a{
+       color:#000;
+       font-weight:700;
+       font-size:small;
+     }
+     img{
+       width: 30px;
+       vertical-align: middle;
+     }
+   }
+ }
+}

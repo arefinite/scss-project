@@ -1,0 +1,35 @@
+@use '../util';
+.build{
+  display: flex;
+  justify-content: space-between;
+  gap:5rem;
+  padding-inline: 15rem;
+  @include util.breakpoint(small){
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+  }
+  &__image{
+    flex:1;
+    @include util.breakpoint(small){
+      display: none;
+    }
+  }
+  &__text{
+    span{
+      color:util.$primary-color
+    }
+
+    ul li:before{
+    content:' ';
+      background-image: url('../assets/images/list-arrow.png');
+      background-repeat: no-repeat;
+      padding: 5px 10px 0 20px;
+      height: 8px;
+      width: 8px;
+    }
+    button{
+      @include util.button(util.$primary-color,#fff);
+      margin-top:1rem;
+    }
+  }
+}

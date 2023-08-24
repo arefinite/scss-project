@@ -1,0 +1,23 @@
+@use '../util';
+.talk{
+  background-color: #F5E2D4;
+  padding-inline:15rem;
+  display: flex;
+  justify-content: space-between;
+  min-height:200px;
+  align-items: center;
+  @include util.breakpoint(small){
+  padding-inline:1rem;
+    flex-wrap: wrap;
+  }
+  &__button{
+    margin-right:10rem;
+    @include util.breakpoint(small){
+      margin-bottom:1rem;
+    }
+   button{
+     @include util.button(util.$primary-color,#fff);
+
+   }
+  }
+}

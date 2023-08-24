@@ -1,0 +1,37 @@
+@use '../util';
+.rules{
+  padding-inline:15rem;
+  display: flex;
+  gap:2rem;
+  justify-content: center;
+
+  @include util.breakpoint(small){
+    flex-wrap: wrap;
+    padding-inline: 1rem;
+    justify-content: center;
+  }
+  img{
+    cursor:pointer
+  }
+  h3{
+    margin-top:0.5rem;
+  }
+  div:nth-child(2){
+      margin-top:2rem;
+    @include util.breakpoint(small){
+      margin-top:0;
+    }
+}
+  div:nth-child(3){
+    margin-top:4rem;
+    @include util.breakpoint(small){
+      margin-top:0;
+    }
+  }
+  div:nth-child(4){
+    margin-top:3rem;
+    @include util.breakpoint(small){
+     display: none;
+    }
+  }
+}

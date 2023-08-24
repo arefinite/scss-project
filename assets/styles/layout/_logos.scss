@@ -1,0 +1,21 @@
+@use '../util';
+.logos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:9rem;
+  background-color: #F5E2D4;
+  min-height: 15vh;
+  padding-inline:15rem;
+  @include util.breakpoint(small){
+    padding-inline:1rem;
+    gap:1rem;
+    flex-wrap: wrap;
+  }
+  img{
+    @include util.breakpoint(small){
+      width:30%;
+
+    }
+  }
+}

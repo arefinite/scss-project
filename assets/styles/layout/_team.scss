@@ -1,0 +1,57 @@
+@use '../util';
+.team{
+  padding-inline:15rem;
+  @include util.breakpoint(small){
+    padding-inline: 1rem;
+  }
+  &__head{
+    display:flex;
+    justify-content: space-between;
+    &__title{
+      span{
+        color:util.$primary-color
+      }
+    }
+    &__description{
+      align-self: center;
+      @include util.breakpoint(small){
+        display: none;
+      }
+    }
+  }
+  &__photos{
+    display: flex;
+    gap:5rem;
+    @include util.breakpoint(small){
+      flex-wrap: wrap;
+    }
+    &__1{
+      width:33%;
+      @include util.breakpoint(small){
+        width: 100%;
+      }
+    .member_photo{
+      img{
+        width: 100%;
+        cursor: pointer;
+
+      }
+    }
+      .member_group{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div{
+          h3{
+            margin-bottom: 0px;
+          }
+        }
+       .icons{
+         display: flex;
+         gap: 1em;
+         cursor: pointer;
+       }
+      }
+    }
+  }
+}

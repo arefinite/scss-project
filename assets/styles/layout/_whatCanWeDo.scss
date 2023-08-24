@@ -1,0 +1,36 @@
+@use '../util';
+.what{
+  display: flex;
+  padding-inline:15rem;
+  //justify-content: space-around;
+  gap:3rem;
+  @include util.breakpoint(small){
+  padding-inline:1rem;
+  }
+  &__text{
+    h1{
+      span{
+        color:util.$primary-color;
+      }
+    }
+    button{
+    @include util.button(util.$primary-color,#fff);
+    }
+  width:50%;
+    @include util.breakpoint(small){
+    width:100%;
+    }
+  }
+  &__images{
+    display: flex;
+    gap:1rem;
+    flex:1;
+    @include util.breakpoint(small){
+  display: none;
+    }
+    img{
+
+    }
+
+  }
+}

@@ -1,0 +1,48 @@
+@use '../util';
+
+.testimonial__container{
+  padding-inline:15rem;
+  @include util.breakpoint(small){
+    padding-inline:1rem;
+  }
+  h1{
+    margin-top:1rem;
+    span{
+      color:util.$primary-color;
+    }
+  }
+  .testimonial{
+    display: flex;
+    gap: 5rem;
+    @include util.breakpoint(small){
+      flex-wrap:wrap;
+      justify-content: center;
+    }
+    &__text{
+      align-self: center;
+      font-weight: 700;
+      font-style: italic;
+      font-size:1.3rem;
+      line-height:1.5rem;
+  &__name{
+    font-style: normal;
+    font-size:1rem;
+    font-weight: normal;
+    & small:nth-child(3){
+      color:#525969;
+    }
+  }
+     div{
+       img{
+         height: 30px;
+         width: 30px;
+       }
+     }
+      .arrow-left{
+        rotate: 180deg;
+        opacity: 0.3;
+
+      }
+    }
+  }
+}
